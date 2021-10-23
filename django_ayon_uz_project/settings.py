@@ -135,6 +135,11 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+# Permissions:
+# AllowAny
+# IsAuthenticated
+# IsAdminUser
+# IsAuthenticatedOrReadOnly
 
 CORS_ALLOWED_ORIGINS = [
     "https://www.ayon.uz",
