@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#!xl^ecj89e0x$epht*hs)c(x$#e=32z*cik7jq$vlo20(hzi%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["desktop-liricur", 'ayon.uz', 'www.ayon.uz', '34.135.80.3', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['ayon.uz', 'www.ayon.uz', '34.135.80.3', '127.0.0.1', 'localhost', "desktop-liricur"]
 
 # Application definition
 
