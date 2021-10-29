@@ -8,6 +8,9 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('django/api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('django/api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
@@ -23,3 +26,5 @@ urlpatterns = [
         version="1.0.0"
     ), name='openapi-schema'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
