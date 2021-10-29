@@ -176,5 +176,8 @@ SIMPLE_JWT = {
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
 # MEDIA_URL = '/../media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+#where images saved
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+
+#add url link before file name
+MEDIA_URL = '/django/media/'
