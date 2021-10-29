@@ -47,13 +47,14 @@ class CreatePost(APIView):
 
     def post(self, request, format=None):
         print(request.data)
-        return Response(request.data, status=status.HTTP_408_REQUEST_TIMEOUT)
-        # serializer = PostSerializer(data=request.data)
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_200_OK)
-        # else:
-        #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        # return Response('fff', status=status.HTTP_408_REQUEST_TIMEOUT)
+        serializer = PostSerializer(data=request.data)
+        if serializer.is_valid():
+            # return Response('fff', status=status.HTTP_408_REQUEST_TIMEOUT)
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class AdminPostDetail(generics.RetrieveAPIView):
